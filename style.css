@@ -1,0 +1,16 @@
+
+.container  {
+    display: flex;
+    justify-content: center;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    border: solid 2px black;
+    margin: 10px;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    width: 500px;
+    height: 100px;
+}
