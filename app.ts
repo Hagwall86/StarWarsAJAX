@@ -1,14 +1,12 @@
 
-console.log("heheh")
+
 const cont = document.querySelector(".container")!;
 const load = document.createElement("h2")
 load.innerHTML = "Your Characters are loading...."
 cont?.append(load)
 
 
-
 const url = "https://swapi.dev/api/people/"
-
 
 
 const p = fetch(url)
@@ -16,14 +14,12 @@ const p = fetch(url)
 
         return respons.json()
     }).then(charObj => {
-        console.log("heheh")
 
-        const loading = document.querySelector("p")!
-        loading.innerHTML = ""
+
+
         logChar(charObj)
+        load.innerHTML = ""
     })
-
-
 
 
 function logChar(charObj: any) {
@@ -34,7 +30,7 @@ function logChar(charObj: any) {
         const container = document.querySelector(".container")!;
         const charName = document.createElement("div")
         charName.className = 'cards'
-        charName.innerHTML = `Name: ${charObj.results[i].name}`
+        charName.innerHTML = `Name: ${charObj.results[i].name} Birth year: ${charObj.results[i].birth_year}`
         container?.append(charName)
 
     }
